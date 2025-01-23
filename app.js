@@ -25,7 +25,21 @@ function adicionarAmigo() {
         alert("Por favor, adicione o nome de um amigo")
     }
 }
+document.getElementById("amigo").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") { // Verifica se a tecla pressionada foi Enter
+        adicionarAmigo(); // Chama a função para adicionar o amigo
+    }});
 
 
-
-
+function sortearAmigo() {
+    let lista = document.getElementById("listaAmigos")
+    if (amigos) {
+        let indiceAleatorio = Math.floor(Math.random() * amigos.length)
+        let amigoSelecionado = amigos[indiceAleatorio];
+        let resultado = document.getElementById("resultado")
+        lista.innerHTML = ""
+        resultado.textContent = `Seu amigo secreto é: ${amigoSelecionado}`
+    } else {
+        alert("Não há amigos na lista para selecionar. ")
+    }
+}
