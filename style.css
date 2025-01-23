@@ -134,6 +134,19 @@ ul {
     margin: 20px 0;
 }
 
+.amigo-item {
+    text-align: center;
+    color: blue; 
+    font-size: 18px; 
+    padding: 10px; 
+    border-bottom: 1px solid #ccc; 
+    list-style-type: none; 
+    transition: background-color 0.3s;
+}
+.amigo-item:hover {
+    background-color: #c4a8a8; 
+}
+
 .result-list {
     margin-top: 15px;
     color: #05DF05;
